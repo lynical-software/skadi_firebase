@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import 'utils.dart';
+
 abstract class FirestoreCollectionService {
   String get tableName;
 
@@ -16,7 +18,6 @@ abstract class FirestoreCollectionService {
   }
 
   Future<String> createDocument(Map<String, dynamic> data, {String? docId}) async {
-    final nowIso = DateTime.now().toUtc().toIso8601String();
     var dId = docId ?? collection.doc().id;
     data.remove("id");
     data[createdField] = nowIso;
@@ -37,7 +38,6 @@ abstract class FirestoreCollectionService {
   }
 
   Future<void> updateDocument(String id, Map<String, dynamic> data) async {
-    final nowIso = DateTime.now().toUtc().toIso8601String();
     await collection.doc(id).update({
       ...data,
       "updated": nowIso,

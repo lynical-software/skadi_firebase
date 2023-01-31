@@ -11,5 +11,5 @@ dependencies:
   skadi_firebase:
     git:
       url: https://github.com/lynical-software/skadi_firebase
-      ref: 0.0.1
+      ref: v0.0.2
 ```
