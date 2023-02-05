@@ -20,8 +20,8 @@ abstract class FirestoreCollectionService {
   Future<String> createDocument(Map<String, dynamic> data, {String? docId}) async {
     var dId = docId ?? collection.doc().id;
     data.remove("id");
-    data[createdField] = nowIso;
-    data[updatedField] = nowIso;
+    data[createdField] = nowUtcIso;
+    data[updatedField] = nowUtcIso;
     await collection.doc(dId).set({
       "id": dId,
       ...data,
@@ -40,7 +40,7 @@ abstract class FirestoreCollectionService {
   Future<void> updateDocument(String id, Map<String, dynamic> data) async {
     await collection.doc(id).update({
       ...data,
-      "updated": nowIso,
+      "updated": nowUtcIso,
     });
   }
 }

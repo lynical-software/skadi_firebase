@@ -1,2 +1,2 @@
-DateTime get now => DateTime.now().toUtc();
-String get nowIso => DateTime.now().toUtc().toIso8601String();
+DateTime get nowUtc => DateTime.now().toUtc();
+String get nowUtcIso => DateTime.now().toUtc().toIso8601String();
