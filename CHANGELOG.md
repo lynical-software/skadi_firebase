@@ -1,3 +1,6 @@
+## [1.0.1] - 12 May 2023
+- fix `FirebasePagination`
+
 ## [1.0.0] - 12 May 2023
 - add `FirebasePagination`
 - Stable release
