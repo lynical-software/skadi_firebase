@@ -1,3 +1,7 @@
+## [1.0.0] - 12 May 2023
+- add `FirebasePagination`
+- Stable release
+
 ## [0.1.0] - 5 February 2023
 - update `cloud_firestore` to latest release
 
