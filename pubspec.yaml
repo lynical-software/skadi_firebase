@@ -1,6 +1,6 @@
 name: skadi_firebase
 description: Utilities class for Firebase.
-version: 1.1.0
+version: 1.3.0
 homepage: https://github.com/lynical-software/skadi_firebase
 
 environment:

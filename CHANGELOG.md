@@ -1,3 +1,6 @@
+## [1.3.0] - 4 Sept 2023
+- Bump firebase version
+
 ## [1.0.1] - 12 May 2023
 - fix `FirebasePagination`
 

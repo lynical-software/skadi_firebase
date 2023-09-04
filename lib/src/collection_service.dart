@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'utils.dart';
 
-abstract class FirestoreCollectionService {
+mixin FirestoreCollectionService {
   String get tableName;
 
   late final collection = FirebaseFirestore.instance.collection(tableName);
