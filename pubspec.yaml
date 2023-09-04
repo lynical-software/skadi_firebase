@@ -1,10 +1,10 @@
 name: skadi_firebase
 description: Utilities class for Firebase.
-version: 1.0.1
+version: 1.1.0
 homepage: https://github.com/lynical-software/skadi_firebase
 
 environment:
-  sdk: ">=2.18.5 <3.0.0"
+  sdk: ">=3.0.0 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
@@ -12,8 +12,8 @@ dependencies:
     sdk: flutter
 
   ##deps
-  cloud_firestore: ^4.3.1
-  future_manager: ^1.5.0
+  cloud_firestore: ^4.9.1
+  future_manager: ^1.7.0
 
 dev_dependencies:
   flutter_test:
