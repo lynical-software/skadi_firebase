@@ -1,4 +1,4 @@
-## [1.4.0] - 15 Nov 2023
+## [1.5.0] - 15 Nov 2023
 - Add extension on CollectionReference
 - 
 ## [1.3.0] - 4 Sept 2023
