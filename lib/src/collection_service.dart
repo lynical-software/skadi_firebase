@@ -34,6 +34,24 @@ mixin FirestoreCollectionService {
     return dId;
   }
 
+  Future<Map<String, dynamic>> createDocumentWithResult(
+    Map<String, dynamic> data, {
+    String? docId,
+    DateTime? created,
+    DateTime? updated,
+  }) async {
+    var dId = docId ?? collection.doc().id;
+    data.remove("id");
+    data[createdField] = created?.toIso8601String() ?? nowUtcIso;
+    data[updatedField] = updated?.toIso8601String() ?? nowUtcIso;
+    await collection.doc(dId).set({
+      "id": dId,
+      ...data,
+    });
+    data['id'] = dId;
+    return data;
+  }
+
   Future<List<T>> fetchAll<T>() async {
     var result = await collection.orderBy(createdField, descending: true).get();
     return result.docs.map((e) {
@@ -45,7 +63,7 @@ mixin FirestoreCollectionService {
   Future<void> updateDocument(String id, Map<String, dynamic> data) async {
     await collection.doc(id).update({
       ...data,
-      "updated": nowUtcIso,
+      updatedField: nowUtcIso,
     });
   }
 

@@ -18,11 +18,15 @@ class FirebasePagination<T> {
     _hasMoreData = true;
   }
 
-  List<T> handle(List<T> response) {
+  List<T> handle(
+    List<T> response, {
+    ///Replace old data with this instead of manager's data if provided
+    List<T>? previousData,
+  }) {
     _hasMoreData = response.length >= limit;
     List<T> oldData = [];
     if (_lastDoc != null) {
-      oldData = [...(manager.data ?? [])];
+      oldData = [...(previousData ?? manager.data ?? [])];
     }
     if (response.isNotEmpty) {
       _lastDoc = response.last;

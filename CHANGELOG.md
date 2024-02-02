@@ -1,3 +1,8 @@
+## [1.16.0] - 2 Feb 2024
+- update Firestore to 10.16
+- Improve FirebasePaginationController
+- Add `createDocumentWithResult`
+
 ## [1.5.0] - 15 Nov 2023
 - Add extension on CollectionReference
 - 
