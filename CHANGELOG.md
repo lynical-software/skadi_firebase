@@ -1,3 +1,7 @@
+## [1.17.0] - 3 Apr 2024
+- update Firestore to 10.22.0
+- rename tag to `v1.7.0-10.22.0`
+
 ## [1.16.0] - 2 Feb 2024
 - update Firestore to 10.16
 - Improve FirebasePaginationController
